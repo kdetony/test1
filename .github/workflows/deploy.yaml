@@ -22,7 +22,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: kdetony/webapp:latest
+          tags: farahblog/webapp:latest
      
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
@@ -42,4 +42,4 @@ jobs:
            passphrase: ${{ secrets.PASS }}
            script: | 
               mkdir -p /root/deploy
-              docker run -dit -p 8080:80 --restart always --name cont_web kdetony/webapp:latest  
+              docker run -dit -p 8080:80 --restart always --name cont_web farahblog/webapp:latest  
