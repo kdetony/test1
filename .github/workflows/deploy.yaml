@@ -42,4 +42,4 @@ jobs:
            passphrase: ${{ secrets.PASS }}
            script: | 
               mkdir -p /root/deploy
-              docker run -dit -p 8080:80 --restart always --name cont_web farahblog/webapp:latest  
+              docker run -dit -p 8080:80 --restart always --name cont_web kdetony/webapp:latest  
